@@ -2,14 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-// int compare_ascending(const void *a, const void *b) {
-//     return (*(int*)a - *(int*)b);
-// }
+void define(int number) {
+    if(number % 2 == 0){
+        printf("%d is an even number.\n",number);
+    }else{
+        printf("%d is an odd number\n",number);
+    }
+}
 
-//     int compare_descending(const void *a, const void *b) {
-//     return (*(int*)b - *(int*)a);
-
-// }
 
 int main(){
     // int count = 1;
@@ -400,47 +400,47 @@ int main(){
 // }
 // }
 
-char userInput;
-int row;
-int col;
-char board[3][3] = {
-      {'1', '2', '3'},
-      {'4', '5', '6'},
-      {'7', '8', '9'}
-};
+// char userInput;
+// int row;
+// int col;
+// char board[3][3] = {
+//       {'1', '2', '3'},
+//       {'4', '5', '6'},
+//       {'7', '8', '9'}
+// };
 
-printf("Welcome to Jasper's X and O game!!\n");
-
-
+// printf("Welcome to Jasper's X and O game!!\n");
 
 
-for(int i = 1; i < 10; i++){
 
-     for(int a = 0; a < 3; a++){
-        for(int b = 0; b < 3; b++) {
-            printf(" %c ", board[i][j]);
-        }
-        printf("\n");
 
-    }
+// for(int i = 1; i < 10; i++){
 
-    for(int i = 0; i < 9; i++){
+//      for(int a = 0; a < 3; a++){
+//         for(int b = 0; b < 3; b++) {
+//             printf(" %c ", board[i][j]);
+//         }
+//         printf("\n");
 
-        printf("Round %d: player x choose an index (1--9): ", i);
-        scanf("%c", userInput);
+//     }
 
-    while(userInput < 1 || userInput > 9){
-        printf("wrong input.... enter an index from 1--9: ");
-        scanf("%d", userInput);
-    }
+//     for(int i = 0; i < 9; i++){
 
-    row = (choice -1)/3;
-    col = (choice -1)%3;
+//         printf("Round %d: player x choose an index (1--9): ", i);
+//         scanf("%c", userInput);
 
-    board[row][col] = userInput;
+//     while(userInput < 1 || userInput > 9){
+//         printf("wrong input.... enter an index from 1--9: ");
+//         scanf("%d", userInput);
+//     }
 
-    printf("\n");
-}
+//     row = (choice -1)/3;
+//     col = (choice -1)%3;
+
+//     board[row][col] = userInput;
+
+//     printf("\n");
+// }
 
 
     
@@ -450,14 +450,14 @@ for(int i = 1; i < 10; i++){
 
 
 
-        printf("\n");
+//         printf("\n");
     
        
 
         
 
 
-        }
+//         }
         
 
 
@@ -465,7 +465,7 @@ for(int i = 1; i < 10; i++){
         
 
 
-    }
+//     }
 
 
 
@@ -498,6 +498,13 @@ for(int i = 1; i < 10; i++){
     //     }
     //     printf("\n");
     // }
+
+
+    int userInput;
+
+    printf("enter a number: ");
+    scanf("%d", &userInput);
+    define(userInput);
 
     return 0;
 }
